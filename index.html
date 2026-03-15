@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kawthar Alkhawajah Portfolio</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Kawthar Alkhawajah Portfolio</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          ☰
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO / HOME -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div>
+    <p class="badge" id="greetingBadge"></p>
+
+      <!-- NAME -->
+<h1 class="hero-title with-photo">
+  <img src="./assets/images/me.png" alt="My photo" class="hero-photo">
+
+  <span class="title-text">
+    <span class="hello-line">Hello!</span>
+    I’m <span class="accent">Kawthar,</span>
+  </span>
+</h1>
+
+
+
+     
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+          </div>
+
+          </p>
+        </div>
+
+        <div class="hero-card" aria-label="Profile card">
+          <div>
+            <h2 class="card-title">Kawthar Alkhawajah</h2>
+            <p class="muted">“Where design meets code.”</p>
+            <ul class="quick-info">
+              <li><span>📍</span> Saudi Arabia</li>
+              <li><span>🎓</span> Student at KFUPM</li>
+              <li><span>💻</span> Software Engineering</li>
+              <li><span>🎨</span> Graphic Designer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>About Me</h2>
+          <p class="muted">
+            I’m a Software Engineering student with a strong interest in UI design and user experience. I enjoy creating clean, user-friendly interfaces and turning ideas into practical digital solutions. My goal is to grow as a developer and designer by building meaningful real-world projects.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card">
+            <h3>Short Bio</h3>
+            <p>
+             Software Engineering student interested in UI design and user experience.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Skills </h3>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Git & GitHub</li>
+              <li>java</li>
+              <li>SQL</li>
+              <li>Python</li>
+              <li>Digital Drawing</li>
+              <li>Figma</li>
+              <li>UI Design</li>
+               <li>Graphic Designe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project card">
+            <img
+              class="project-img"
+              src="assets/images/project-1.png"
+              alt="Project 1 placeholder"
+              onerror="this.style.display='none';"
+            />
+            <h3>KFUPM CRN Schedule & Building Distance Tool</h3>
+            <p class="muted">
+              A Java-based tool that allows students to enter their class CRNs and automatically generates a weekly timetable showing class locations by building. It also estimates the walking distance between consecutive classes to help students plan their campus movement more efficiently.
+            </p>
+          </article>
+
+          <article class="project card">
+            <img
+              class="project-img"
+              src="assets/images/project-2.png"
+              alt="Project 2 placeholder"
+              onerror="this.style.display='none';"
+            />
+            <h3>Horse Stable Management System (Java + SQL)</h3>
+            <p class="muted">
+              A desktop management system for horse stables built using Java and SQL. The application stores and manages data about horses, owners, races, and registrations, allowing structured record keeping and easy data retrieval through database queries.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="contact-grid">
+          <form class="card form" id="contactForm" novalidate>
+            <label>
+              Name
+              <input type="text" name="name" id="name" placeholder="your name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" id="email" placeholder="you@example.com" required />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" id="message" rows="5" placeholder="Write your message..." required></textarea>
+            </label>
+
+            <button class="btn primary" type="submit">Send</button>
+            <p class="small muted" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="card">
+            <h3>Quick Links</h3>
+              <ul class="list">
+          <li>
+            <a href="https://github.com/kawthar1235" target="_blank">
+              GitHub
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/kawthar-al-khawaja-639a97367" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:kawtharkhawaja1@gmail.com">
+              kawtharkhawaja1@gmail.com
+            </a>
+          </li>
+        </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted small">© <span id="year"></span> Kawthar Alkhawajah</p>
+      <a class="small" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
