@@ -1,0 +1,389 @@
+:root{
+  --bg: #0b1220;
+  --card: rgba(255,255,255,.06);
+  --text: #eaf0ff;
+  --muted: rgba(234,240,255,.72);
+  --border: rgba(255,255,255,.12);
+  --accent: #f99fe2;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+html[data-theme="light"]{
+  --bg: #f7f8fc;
+  --card: rgba(0,0,0,.04);
+  --text: #111827;
+  --muted: rgba(17,24,39,.72);
+  --border: rgba(0,0,0,.12);
+  --accent: #f99fe2;
+  --shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a{ color: inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.skip-link{
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: var(--text);
+  color: var(--bg);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.skip-link:focus{ left: 10px; }
+
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  backdrop-filter: blur(12px);
+
+  background: linear-gradient(
+    120deg,
+    rgba(249,159,226,0.35),
+    rgba(255,209,102,0.35)
+  );
+
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+#themeToggle{
+  background: white;
+  color: #111;
+  border: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+}
+
+
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  gap: 12px;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+.brand-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.nav{ display: flex; align-items: center; gap: 10px; }
+
+.nav-toggle{
+  display: none;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.nav-menu{
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.header-actions{ display: flex; gap: 8px; align-items: center; }
+
+.btn{
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: none;
+}
+.btn:hover{ box-shadow: var(--shadow); text-decoration: none; }
+
+.btn.primary {
+  background: linear-gradient(120deg, #f99fe2, #FFD166);
+  color: white;
+  border: none;
+}
+
+.btn.ghost{ background: transparent; }
+.btn.small{ padding: 8px 10px; border-radius: 12px; font-size: 14px; }
+
+.section{ padding: 70px 0; }
+.section.alt{
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 55%, transparent);
+}
+
+.section-head{ margin-bottom: 22px; }
+.section-head h2{ margin: 0 0 6px 0; font-size: 30px; }
+.muted{ color: var(--muted); }
+.small{ font-size: 14px; }
+
+.hero{
+  padding: 40px 0 40px;}
+
+/* Grid */
+.hero-grid{
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.hero-title{
+  font-size: clamp(34px, 5vw, 54px);
+  margin: 12px 0 10px;
+}
+
+
+.hero-title.with-photo{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.accent{ color: var(--accent); }
+.hero-subtitle{ font-size: 18px; margin: 0 0 16px; }
+
+.badge{
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.hero-cta{ display: flex; gap: 10px; flex-wrap: wrap; }
+
+.card{
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: none;
+}
+.card-title{ margin: 0 0 6px 0; }
+
+/* ✅ كارد اليمين بدون دفع غريب */
+.hero-card{
+  justify-self: end;
+  transform: translateX(40px);
+}
+
+
+.hero-card .avatar{
+  width: 88px;
+  height: 88px;
+}
+
+.hero-card h2{ font-size: 22px; }
+
+@media (max-width: 900px){
+  .hero-card{
+    width: 100%;
+    min-height: auto;
+    padding: 18px;
+  }
+}
+
+/* Lists */
+.quick-info{
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  gap: 8px;
+}
+.quick-info li{ display: flex; gap: 10px; align-items: center; }
+
+.about-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tags{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags li{
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.list{ margin: 0; padding-left: 18px; }
+
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.project-img{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+.project-links{
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 16px;
+}
+
+.form label{
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+input, textarea{
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+input:focus, textarea:focus{
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+}
+
+.site-footer{
+  border-top: 1px solid var(--border);
+  padding: 22px 0;
+}
+.footer-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .about-grid{ grid-template-columns: 1fr; }
+  .projects-grid{ grid-template-columns: 1fr; }
+  .contact-grid{ grid-template-columns: 1fr; }
+
+  .nav-toggle{ display: inline-flex; }
+  .nav-menu{
+    display: none;
+    position: absolute;
+    right: 4%;
+    top: 62px;
+    flex-direction: column;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 10px;
+    width: min(240px, 92vw);
+  }
+  .nav-menu.open{ display: flex; }
+
+ 
+  .hero-title.with-photo{ flex-wrap: wrap; }
+}
+
+
+.hero-photo{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+
+  border: none;
+  border-radius: 14px;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* ===== Mouse Gradient Glow — Whole Page ===== */
+
+body{
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: -100px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .50;
+
+  background:
+    radial-gradient(
+      900px circle at var(--mx, 50%) var(--my, 40%),
+      rgba(252, 156, 255, 0.35),
+      rgba(250, 204, 96, 0.25) 35%,
+      transparent 65%
+    );
+
+  filter: blur(18px);
+}
+
+/* نخلي كل المحتوى فوق طبقة الألوان */
+body > *{
+  position: relative;
+  z-index: 1;
+}
