@@ -60,31 +60,59 @@ $("#year").textContent = new Date().getFullYear();
 })();
 
 // ===== Contact form interaction (no backend) =====
-(function contactForm(){
+// ===== Contact form interaction (no backend) =====
+(function contactForm() {
   const form = $("#contactForm");
   const status = $("#formStatus");
+  const submitBtn = $("#submitBtn");
+  const nameInput = $("#name");
+  const emailInput = $("#email");
+  const messageInput = $("#message");
+
+  if (!form || !status || !submitBtn) return;
+
+  function showStatus(message, type) {
+    status.textContent = message;
+    status.className = `form-status small show ${type}`;
+  }
+
+  function clearErrors() {
+    [nameInput, emailInput, messageInput].forEach((input) => {
+      input.classList.remove("input-error");
+    });
+  }
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    clearErrors();
 
-    const name = $("#name").value.trim();
-    const email = $("#email").value.trim();
-    const message = $("#message").value.trim();
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
 
     if (!name || !email || !message) {
-      status.textContent = "Please fill in all fields.";
+      if (!name) nameInput.classList.add("input-error");
+      if (!email) emailInput.classList.add("input-error");
+      if (!message) messageInput.classList.add("input-error");
+
+      showStatus("Please fill in all fields before sending.", "error");
       return;
     }
 
-    // Simple email check
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!emailOk) {
-      status.textContent = "Please enter a valid email address.";
+      emailInput.classList.add("input-error");
+      showStatus("Please enter a valid email address.", "error");
       return;
     }
 
-    status.textContent = `Thanks, ${name}! Your message is ready (no backend connected).`;
-    form.reset();
+    submitBtn.textContent = "Sending...";
+
+    setTimeout(() => {
+      showStatus(`Thanks, ${name}! Your message was prepared successfully.`, "success");
+      form.reset();
+      submitBtn.textContent = "Send";
+    }, 700);
   });
 })();
 
@@ -97,3 +125,87 @@ document.addEventListener("mousemove", (e) => {
   document.documentElement.style.setProperty("--mx", x + "%");
   document.documentElement.style.setProperty("--my", y + "%");
 });
+// ===== Project Modal =====
+(function projectModal() {
+  const modal = $("#projectModal");
+  const modalClose = $("#modalClose");
+  const modalTitle = $("#modalTitle");
+  const modalDescription = $("#modalDescription");
+  const modalTools = $("#modalTools");
+  const modalLink = $("#modalLink");
+  const detailButtons = document.querySelectorAll(".details-btn");
+
+  if (!modal || !modalClose || !modalTitle || !modalDescription || !modalTools || !modalLink) return;
+
+  detailButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      modalTitle.textContent = button.dataset.title;
+      modalDescription.textContent = button.dataset.description;
+      modalTools.textContent = button.dataset.tools;
+      modalLink.href = button.dataset.link;
+
+      modal.classList.remove("hidden");
+      modal.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  modalClose.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    modal.setAttribute("aria-hidden", "true");
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modal.setAttribute("aria-hidden", "true");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      modal.classList.add("hidden");
+      modal.setAttribute("aria-hidden", "true");
+    }
+  });
+})();
+
+// ===== Reveal sections on scroll =====
+(function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  if (!reveals.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  reveals.forEach((section) => observer.observe(section));
+})();
+
+// ===== Typing name animation =====
+(function typingNameEffect() {
+  const target = document.getElementById("typingName");
+  if (!target) return;
+
+  const text = "Kawthar Ali,";
+  let index = 0;
+
+  function typeLetter() {
+    if (index < text.length) {
+      target.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeLetter, 140);
+    }
+  }
+
+  typeLetter();
+})();

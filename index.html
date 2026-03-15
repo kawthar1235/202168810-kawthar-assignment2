@@ -9,6 +9,18 @@
   <script src="js/script.js" defer></script>
 </head>
 <body>
+  <div class="falling-elements" aria-hidden="true">
+  <span>HTML</span>
+  <span>CSS</span>
+  <span>JS</span>
+  <span>UI</span>
+  <span>UX</span>
+  <span>&lt;/&gt;</span>
+  <span>{ }</span>
+  <span>Figma</span>
+  <span>Code</span>
+  <span>Design</span>
+</div>
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -42,34 +54,27 @@
 
   <main id="main">
     <!-- HERO / HOME -->
-<section id="home" class="hero">
-  <div class="container hero-grid">
-    <div>
-    <p class="badge" id="greetingBadge"></p>
+    <section id="home" class="hero reveal">
+      <div class="container hero-grid">
+        <div>
+          <p class="badge" id="greetingBadge"></p>
 
-      <!-- NAME -->
-<h1 class="hero-title with-photo">
-  <img src="./assets/images/me.png" alt="My photo" class="hero-photo">
+          <h1 class="hero-title with-photo">
+            <img src="./assets/images/me.png" alt="My photo" class="hero-photo" />
 
-  <span class="title-text">
-    <span class="hello-line">Hello!</span>
-    I’m <span class="accent">Kawthar,</span>
-  </span>
-</h1>
-
-
-
-     
+            <span class="title-text">
+  <span class="hello-line">Hello!</span>
+  I’m <span class="accent typing-text" id="typingName"></span>
+</span>
+          </h1>
 
           <div class="hero-cta">
             <a class="btn primary" href="#projects">View Projects</a>
             <a class="btn" href="#contact">Contact Me</a>
           </div>
-
-          </p>
         </div>
 
-        <div class="hero-card" aria-label="Profile card">
+        <div class="hero-card card" aria-label="Profile card">
           <div>
             <h2 class="card-title">Kawthar Alkhawajah</h2>
             <p class="muted">“Where design meets code.”</p>
@@ -85,7 +90,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
       <div class="container">
         <div class="section-head">
           <h2>About Me</h2>
@@ -98,24 +103,24 @@
           <div class="card">
             <h3>Short Bio</h3>
             <p>
-             Software Engineering student interested in UI design and user experience.
+              Software Engineering student interested in UI design and user experience.
             </p>
           </div>
 
           <div class="card">
-            <h3>Skills </h3>
+            <h3>Skills</h3>
             <ul class="tags">
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
               <li>Git & GitHub</li>
-              <li>java</li>
+              <li>Java</li>
               <li>SQL</li>
               <li>Python</li>
               <li>Digital Drawing</li>
               <li>Figma</li>
               <li>UI Design</li>
-               <li>Graphic Designe</li>
+              <li>Graphic Design</li>
             </ul>
           </div>
         </div>
@@ -123,44 +128,90 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section alt">
+    <section id="projects" class="section alt reveal">
       <div class="container">
         <div class="section-head">
           <h2>Projects</h2>
+          <p class="muted">Hover over a card to flip it, then click for more details.</p>
         </div>
 
         <div class="projects-grid">
-          <article class="project card">
-            <img
-              class="project-img"
-              src="assets/images/project-1.png"
-              alt="Project 1 placeholder"
-              onerror="this.style.display='none';"
-            />
-            <h3>KFUPM CRN Schedule & Building Distance Tool</h3>
-            <p class="muted">
-              A Java-based tool that allows students to enter their class CRNs and automatically generates a weekly timetable showing class locations by building. It also estimates the walking distance between consecutive classes to help students plan their campus movement more efficiently.
-            </p>
+          <article class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card">
+                <img
+                  class="project-img"
+                  src="assets/images/project-1.png"
+                  alt="KFUPM CRN Schedule & Building Distance Tool preview"
+                  onerror="this.style.display='none';"
+                />
+                <h3>KFUPM CRN Schedule & Building Distance Tool</h3>
+                <p class="muted">Java campus scheduling tool</p>
+              </div>
+
+              <div class="flip-card-back card">
+                <h3>Project Overview</h3>
+                <p>Java-based academic tool for timetable generation and walking-distance estimation.</p>
+                <button
+                  class="btn primary details-btn"
+                  type="button"
+                  data-title="KFUPM CRN Schedule & Building Distance Tool"
+                  data-description="A Java-based tool that allows students to enter their class CRNs and automatically generates a weekly timetable showing class locations by building. It also estimates the walking distance between consecutive classes to help students plan their campus movement more efficiently."
+                  data-tools="Java, OOP, Scheduling Logic"
+                  data-link="https://github.com/kawthar1235"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
           </article>
 
-          <article class="project card">
-            <img
-              class="project-img"
-              src="assets/images/project-2.png"
-              alt="Project 2 placeholder"
-              onerror="this.style.display='none';"
-            />
-            <h3>Horse Stable Management System (Java + SQL)</h3>
-            <p class="muted">
-              A desktop management system for horse stables built using Java and SQL. The application stores and manages data about horses, owners, races, and registrations, allowing structured record keeping and easy data retrieval through database queries.
-            </p>
+          <article class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card">
+                <img
+                  class="project-img"
+                  src="assets/images/project-2.png"
+                  alt="Horse Stable Management System preview"
+                  onerror="this.style.display='none';"
+                />
+                <h3>Horse Stable Management System</h3>
+                <p class="muted">Desktop app using Java + SQL</p>
+              </div>
+
+              <div class="flip-card-back card">
+                <h3>Project Overview</h3>
+                <p>Desktop system for managing horse, owner, race, and registration records.</p>
+                <button
+                  class="btn primary details-btn"
+                  type="button"
+                  data-title="Horse Stable Management System (Java + SQL)"
+                  data-description="A desktop management system for horse stables built using Java and SQL. The application stores and manages data about horses, owners, races, and registrations, allowing structured record keeping and easy data retrieval through database queries."
+                  data-tools="Java, SQL, Database Design"
+                  data-link="https://github.com/kawthar1235"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Project Modal -->
+    <div class="modal hidden" id="projectModal" aria-hidden="true">
+      <div class="modal-content card">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close modal">×</button>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription" class="muted"></p>
+        <p><strong>Tools:</strong> <span id="modalTools"></span></p>
+        <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer">View GitHub</a>
+      </div>
+    </div>
+
     <!-- CONTACT -->
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
       <div class="container">
         <div class="section-head">
           <h2>Contact</h2>
@@ -170,7 +221,7 @@
           <form class="card form" id="contactForm" novalidate>
             <label>
               Name
-              <input type="text" name="name" id="name" placeholder="your name" required />
+              <input type="text" name="name" id="name" placeholder="Your name" required />
             </label>
 
             <label>
@@ -183,31 +234,32 @@
               <textarea name="message" id="message" rows="5" placeholder="Write your message..." required></textarea>
             </label>
 
-            <button class="btn primary" type="submit">Send</button>
-            <p class="small muted" id="formStatus" role="status" aria-live="polite"></p>
+            <button class="btn primary" id="submitBtn" type="submit">Send</button>
+            <p class="form-status small" id="formStatus" role="status" aria-live="polite"></p>
           </form>
 
           <div class="card">
             <h3>Quick Links</h3>
-              <ul class="list">
-          <li>
-            <a href="https://github.com/kawthar1235" target="_blank">
-              GitHub
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/in/kawthar-al-khawaja-639a97367" target="_blank">
-              LinkedIn
-            </a>
-          </li>
-
-          <li>
-            <a href="mailto:kawtharkhawaja1@gmail.com">
-              kawtharkhawaja1@gmail.com
-            </a>
-          </li>
-        </ul>
+            <ul class="list">
+              <li>
+                <a href="https://github.com/kawthar1235" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/kawthar-al-khawaja-639a97367" target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="mailto:kawtharkhawaja1@gmail.com">
+                  kawtharkhawaja1@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
