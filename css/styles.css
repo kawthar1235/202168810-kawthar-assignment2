@@ -696,3 +696,179 @@ body > *{
   0%, 50%{ opacity: 1; }
   51%, 100%{ opacity: 0; }
 }
+
+/* ===== Cinematic Design Stack ===== */
+
+.design-stack{
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack-img{
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  background: var(--card);
+
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  cursor: pointer;
+
+  transition:
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.55s ease,
+    filter 0.55s ease;
+}
+
+
+.stack-img:nth-child(1){
+  z-index: 4;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.stack-img:nth-child(2){
+  z-index: 3;
+  transform: translate(-46%, -46%) rotate(-3deg) scale(0.96);
+  opacity: 0.9;
+  filter: blur(0.2px);
+}
+
+.stack-img:nth-child(3){
+  z-index: 2;
+  transform: translate(-54%, -42%) rotate(3deg) scale(0.92);
+  opacity: 0.75;
+  filter: blur(0.4px);
+}
+
+.stack-img:nth-child(4){
+  z-index: 1;
+  transform: translate(-50%, -38%) rotate(-5deg) scale(0.88);
+  opacity: 0.6;
+  filter: blur(0.8px);
+}
+
+
+.design-stack:hover .stack-img:nth-child(1){
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.02);
+}
+
+
+.stack-img.exit-right{
+  transform: translate(-18%, -52%) rotate(12deg) scale(0.96) !important;
+  opacity: 0;
+  filter: blur(1px);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .design-stack{
+    max-width: 100%;
+    height: 380px;
+  }
+}
+
+@media (max-width: 600px){
+  .design-stack{
+    height: 300px;
+  }
+
+  .stack-img{
+    max-width: 92%;
+    max-height: 92%;
+  }
+}
+
+/* ===== Modern Nav Boxes ===== */
+
+.nav-menu{
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-box{
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-weight: 500;
+
+ background: rgba(255,255,255,0.06);
+backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(8px);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect 🔥 */
+.nav-box:hover{
+  background: linear-gradient(120deg, #f99fe2, #FFD166);
+  color: white;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+/* Active effect (اختياري) */
+.nav-box:active{
+  transform: scale(0.96);
+}
+
+/* ===== Section Boxes (Modern Layout) ===== */
+
+.section{
+  padding: 80px 24px;
+  margin: 40px auto;
+  width: min(1100px, 92%);
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover خفيف يعطي حياة */
+.section:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+}
+
+
+#about{
+  background: linear-gradient(
+    135deg,
+    rgba(249,159,226,0.10),
+    rgba(255,255,255,0.04)
+  );
+}
+
+#projects{
+  background: linear-gradient(
+    135deg,
+    rgba(255,209,102,0.12),
+    rgba(255,255,255,0.04)
+  );
+}

@@ -209,3 +209,27 @@ document.addEventListener("mousemove", (e) => {
 
   typeLetter();
 })();
+
+// ===== Cinematic Design Stack =====
+(function designStack() {
+  const stack = document.getElementById("designStack");
+  if (!stack) return;
+
+  let isAnimating = false;
+
+  stack.addEventListener("click", () => {
+    if (isAnimating) return;
+
+    const first = stack.querySelector(".stack-img");
+    if (!first) return;
+
+    isAnimating = true;
+    first.classList.add("exit-right");
+
+    setTimeout(() => {
+      first.classList.remove("exit-right");
+      stack.appendChild(first);
+      isAnimating = false;
+    }, 700);
+  });
+})();
