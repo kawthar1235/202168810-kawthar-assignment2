@@ -1,77 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kawthar Alkhawajah Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio website of Kawthar Alkhawajah, a Software Engineering student interested in UI/UX design, front-end development, and digital creativity."
+  />
+  <meta name="author" content="Kawthar Alkhawajah" />
+  <title>Kawthar Alkhawajah | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="css/styles.css" />
   <script src="js/script.js" defer></script>
 </head>
 <body>
+  <!-- Decorative animated background words -->
   <div class="falling-elements" aria-hidden="true">
-  <span>HTML</span>
-  <span>CSS</span>
-  <span>JS</span>
-  <span>UI</span>
-  <span>UX</span>
-  <span>&lt;/&gt;</span>
-  <span>{ }</span>
-  <span>Figma</span>
-  <span>Code</span>
-  <span>Design</span>
-</div>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JS</span>
+    <span>UI</span>
+    <span>UX</span>
+    <span>&lt;/&gt;</span>
+    <span>{ }</span>
+    <span>Figma</span>
+    <span>Code</span>
+    <span>Design</span>
+  </div>
 
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
+  <!-- Header -->
+  <header class="site-header" id="home">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Go to Home">
+      <a class="brand" href="#home" aria-label="Go to homepage">
         <span class="brand-dot" aria-hidden="true"></span>
         <span>Kawthar Alkhawajah Portfolio</span>
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          aria-label="Toggle navigation menu"
+        >
           ☰
           <span class="sr-only">Toggle navigation</span>
         </button>
 
-     <ul class="nav-menu" id="navMenu">
-  <li><a class="nav-box" href="#about">About</a></li>
-  <li><a class="nav-box" href="#projects">Projects</a></li>
-  <li><a class="nav-box" href="#designs">Designs</a></li>
-  <li><a class="nav-box" href="#contact">Contact</a></li>
-</ul>
+        <ul class="nav-menu" id="navMenu">
+          <li><a class="nav-box" href="#about">About</a></li>
+          <li><a class="nav-box" href="#projects">Projects</a></li>
+          <li><a class="nav-box" href="#designs">Designs</a></li>
+          <li><a class="nav-box" href="#contact">Contact</a></li>
+        </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="btn ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+        <button
+          class="btn ghost"
+          id="themeToggle"
+          type="button"
+          aria-label="Toggle light and dark theme"
+          title="Toggle theme"
+        >
           🌙
         </button>
-      </div> 
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO / HOME -->
-    <section id="home" class="hero reveal">
+    <!-- Hero Section -->
+    <section class="hero reveal" aria-labelledby="hero-heading">
       <div class="container hero-grid">
-        <div>
-          <p class="badge" id="greetingBadge"></p>
+        <div class="hero-content">
+          <p class="badge" id="greetingBadge" aria-live="polite"></p>
 
-          <h1 class="hero-title with-photo">
-            <img src="./assets/images/me.png" alt="My photo" class="hero-photo" />
+          <h1 class="hero-title with-photo" id="hero-heading">
+            <img
+              src="assets/images/me.png"
+              alt="Portrait of Kawthar Alkhawajah"
+              class="hero-photo"
+            />
 
             <span class="title-text">
-  <span class="hello-line">Hello!</span>
-  I’m <span class="accent typing-text" id="typingName"></span>
-</span>
+              <span class="hello-line">Hello!</span>
+              I’m <span class="accent typing-text" id="typingName"></span>
+            </span>
           </h1>
+
+          <p class="hero-subtitle muted">
+            Software Engineering student focused on UI/UX design, front-end
+            development, and creating clean digital experiences.
+          </p>
 
           <div class="hero-cta">
             <a class="btn primary" href="#projects">View Projects</a>
@@ -79,104 +111,112 @@
           </div>
         </div>
 
-        <div class="hero-card card" aria-label="Profile card">
+        <aside class="hero-card card" aria-label="Profile summary">
           <div>
             <h2 class="card-title">Kawthar Alkhawajah</h2>
             <p class="muted">“Where design meets code.”</p>
+
             <ul class="quick-info">
-              <li><span>📍</span> Saudi Arabia</li>
-              <li><span>🎓</span> Student at KFUPM</li>
-              <li><span>💻</span> Software Engineering</li>
-              <li><span>🎨</span> Graphic Designer</li>
+              <li><span aria-hidden="true">📍</span> Saudi Arabia</li>
+              <li><span aria-hidden="true">🎓</span> Student at KFUPM</li>
+              <li><span aria-hidden="true">💻</span> Software Engineering</li>
+              <li><span aria-hidden="true">🎨</span> Graphic Designer</li>
             </ul>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section reveal">
+    <!-- About Section -->
+    <section id="about" class="section reveal" aria-labelledby="about-heading">
       <div class="container">
         <div class="section-head">
-          <h2>About Me</h2>
+          <h2 id="about-heading">About Me</h2>
           <p class="muted">
-            I’m a Software Engineering student with a strong interest in UI design and user experience. I enjoy creating clean, user-friendly interfaces and turning ideas into practical digital solutions. My goal is to grow as a developer and designer by building meaningful real-world projects.
+            I’m a Software Engineering student with a strong interest in UI
+            design and user experience. I enjoy creating clean, user-friendly
+            interfaces and turning ideas into practical digital solutions. My
+            goal is to grow as a developer and designer by building meaningful
+            real-world projects.
           </p>
         </div>
 
         <div class="about-grid">
-          <div class="card skills-full">
-  <h3>Skills</h3>
+          <article class="card skills-full" aria-labelledby="skills-heading">
+            <h3 id="skills-heading">Skills</h3>
 
-  <div class="skills-groups">
-    
-    <!-- Technical -->
-    <div class="skill-group">
-      <h4>Technical</h4>
-      <ul class="tags">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>SQL</li>
-      </ul>
-    </div>
+            <div class="skills-groups">
+              <section class="skill-group" aria-labelledby="technical-heading">
+                <h4 id="technical-heading">Technical</h4>
+                <ul class="tags">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>SQL</li>
+                </ul>
+              </section>
 
-    <!-- Design -->
-    <div class="skill-group">
-      <h4>Design</h4>
-      <ul class="tags">
-        <li>UI Design</li>
-        <li>Graphic Design</li>
-        <li>Digital Drawing</li>
-      </ul>
-    </div>
+              <section class="skill-group" aria-labelledby="design-heading">
+                <h4 id="design-heading">Design</h4>
+                <ul class="tags">
+                  <li>UI Design</li>
+                  <li>Graphic Design</li>
+                  <li>Digital Drawing</li>
+                </ul>
+              </section>
 
-    <!-- Tools -->
-    <div class="skill-group">
-      <h4>Tools</h4>
-      <ul class="tags">
-  <li>Git & GitHub</li>
-  <li>VS Code</li>
-  <li>IntelliJ</li>
-  <li>Figma</li>
-  <li>MySQL Workbench</li>
-  <li>procreate</li>
-  <li>canva</li>
-  <li>Adobe Illustrator</li>
-</ul>
-    </div>
-
-  </div>
-</div>
+              <section class="skill-group" aria-labelledby="tools-heading">
+                <h4 id="tools-heading">Tools</h4>
+                <ul class="tags">
+                  <li>Git &amp; GitHub</li>
+                  <li>VS Code</li>
+                  <li>IntelliJ</li>
+                  <li>Figma</li>
+                  <li>MySQL Workbench</li>
+                  <li>Procreate</li>
+                  <li>Canva</li>
+                  <li>Adobe Illustrator</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section alt reveal">
+    <!-- Projects Section -->
+    <section id="projects" class="section alt reveal" aria-labelledby="projects-heading">
       <div class="container">
         <div class="section-head">
-          <h2>Projects</h2>
-          <p class="muted">Hover over a card to flip it, then click for more details.</p>
+          <h2 id="projects-heading">Projects</h2>
+          <p class="muted">
+            Hover over a card to flip it, then click to read more details.
+          </p>
         </div>
 
         <div class="projects-grid">
-          <article class="flip-card">
+          <article class="flip-card" aria-label="KFUPM CRN Schedule and Building Distance Tool project">
             <div class="flip-card-inner">
               <div class="flip-card-front card">
                 <img
                   class="project-img"
                   src="assets/images/project-1.png"
-                  alt="KFUPM CRN Schedule & Building Distance Tool preview"
+                  alt="Preview of KFUPM CRN Schedule and Building Distance Tool"
+                  loading="lazy"
                   onerror="this.style.display='none';"
                 />
-                <h3>KFUPM CRN Schedule & Building Distance Tool</h3>
+                <h3>KFUPM CRN Schedule &amp; Building Distance Tool</h3>
                 <p class="muted">Java campus scheduling tool</p>
               </div>
 
               <div class="flip-card-back card">
                 <h3>Project Overview</h3>
-                <p>Java-based academic tool for timetable generation and walking-distance estimation.</p>
+                <p>
+                  Java-based academic tool for timetable generation and
+                  walking-distance estimation.
+                </p>
                 <button
                   class="btn primary details-btn"
                   type="button"
@@ -191,22 +231,26 @@
             </div>
           </article>
 
-          <article class="flip-card">
+          <article class="flip-card" aria-label="Horse Stable Management System project">
             <div class="flip-card-inner">
               <div class="flip-card-front card">
                 <img
                   class="project-img"
                   src="assets/images/project-2.png"
-                  alt="Horse Stable Management System preview"
+                  alt="Preview of Horse Stable Management System"
+                  loading="lazy"
                   onerror="this.style.display='none';"
                 />
                 <h3>Horse Stable Management System</h3>
-                <p class="muted">Desktop app using Java + SQL</p>
+                <p class="muted">Desktop app using Java and SQL</p>
               </div>
 
               <div class="flip-card-back card">
                 <h3>Project Overview</h3>
-                <p>Desktop system for managing horse, owner, race, and registration records.</p>
+                <p>
+                  Desktop system for managing horse, owner, race, and
+                  registration records.
+                </p>
                 <button
                   class="btn primary details-btn"
                   type="button"
@@ -220,104 +264,172 @@
               </div>
             </div>
           </article>
-          <article class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front card">
-      <img
-        class="project-img"
-        src="assets/images/project-3.png"
-        alt="Planova productivity app preview"
-        onerror="this.style.display='none';"
-      />
-      <h3>Planova</h3>
-      <p class="muted">Productivity and event planning web app</p>
-    </div>
 
-    <div class="flip-card-back card">
-      <h3>Project Overview</h3>
-      <p>A web-based productivity app for managing tasks, tracking events, and organizing schedules in one interactive space.</p>
-      <button
-        class="btn primary details-btn"
-        type="button"
-        data-title="Planova"
-        data-description="Planova is a productivity web application designed to help users organize their tasks and upcoming events in one place. It allows users to add, edit, and delete tasks and events, view live countdowns for important events, and interact with a monthly calendar that displays scheduled items by date. The project also includes a personalized welcome message with a typing effect and uses localStorage to save user data directly in the browser."
-        data-tools="HTML, CSS, JavaScript, localStorage"
-        data-link="https://github.com/kawthar1235/Planova.git"
-      >
-        View Details
-      </button>
-    </div>
-  </div>
-</article>
+          <article class="flip-card" aria-label="Planova project">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card">
+                <img
+                  class="project-img"
+                  src="assets/images/project-3.png"
+                  alt="Preview of Planova productivity application"
+                  loading="lazy"
+                  onerror="this.style.display='none';"
+                />
+                <h3>Planova</h3>
+                <p class="muted">Productivity and event planning web app</p>
+              </div>
+
+              <div class="flip-card-back card">
+                <h3>Project Overview</h3>
+                <p>
+                  A web-based productivity app for managing tasks, tracking
+                  events, and organizing schedules in one interactive space.
+                </p>
+                <button
+                  class="btn primary details-btn"
+                  type="button"
+                  data-title="Planova"
+                  data-description="Planova is a productivity web application designed to help users organize their tasks and upcoming events in one place. It allows users to add, edit, and delete tasks and events, view live countdowns for important events, and interact with a monthly calendar that displays scheduled items by date. The project also includes a personalized welcome message with a typing effect and uses localStorage to save user data directly in the browser."
+                  data-tools="HTML, CSS, JavaScript, localStorage"
+                  data-link="https://github.com/kawthar1235/Planova.git"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
-<!-- DESIGNS -->
-<section id="designs" class="section alt reveal">
-  <div class="container">
-    <div class="section-head">
-      <h2>Designs</h2>
-      <p class="muted">Click the stack to browse my design work.</p>
-    </div>
 
-    <div class="design-stack" id="designStack">
-      <img src="assets/images/design-1.png" alt="Design 1" class="stack-img" />
-      <img src="assets/images/design-2.png" alt="Design 2" class="stack-img" />
-      <img src="assets/images/design-3.png" alt="Design 3" class="stack-img" />
-      <img src="assets/images/design-4.png" alt="Design 4" class="stack-img" />
-    </div>
-  </div>
-</section>
+    <!-- Designs Section -->
+    <section id="designs" class="section alt reveal" aria-labelledby="designs-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="designs-heading">Designs</h2>
+          <p class="muted">Click the stack to browse my design work.</p>
+        </div>
 
-    <!-- Project Modal -->
-    <div class="modal hidden" id="projectModal" aria-hidden="true">
+        <div
+          class="design-stack"
+          id="designStack"
+          role="button"
+          tabindex="0"
+          aria-label="Browse design portfolio images"
+        >
+          <img src="assets/images/design-1.png" alt="Design work sample 1" class="stack-img" loading="lazy" />
+          <img src="assets/images/design-2.png" alt="Design work sample 2" class="stack-img" loading="lazy" />
+          <img src="assets/images/design-3.png" alt="Design work sample 3" class="stack-img" loading="lazy" />
+          <img src="assets/images/design-4.png" alt="Design work sample 4" class="stack-img" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div
+      class="modal hidden"
+      id="projectModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDescription"
+    >
       <div class="modal-content card">
-        <button class="modal-close" id="modalClose" type="button" aria-label="Close modal">×</button>
+        <button
+          class="modal-close"
+          id="modalClose"
+          type="button"
+          aria-label="Close project details modal"
+        >
+          ×
+        </button>
+
         <h3 id="modalTitle"></h3>
         <p id="modalDescription" class="muted"></p>
         <p><strong>Tools:</strong> <span id="modalTools"></span></p>
-        <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer">View GitHub</a>
+        <a
+          id="modalLink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View GitHub
+        </a>
       </div>
     </div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section reveal">
+    <!-- Contact Section -->
+    <section id="contact" class="section reveal" aria-labelledby="contact-heading">
       <div class="container">
         <div class="section-head">
-          <h2>Contact</h2>
+          <h2 id="contact-heading">Contact</h2>
+          <p class="muted">
+            Feel free to reach out for collaboration, project discussion, or
+            professional connection.
+          </p>
         </div>
 
         <div class="contact-grid">
           <form class="card form" id="contactForm" novalidate>
-            <label>
-              Name
-              <input type="text" name="name" id="name" placeholder="Your name" required />
-            </label>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+            />
 
-            <label>
-              Email
-              <input type="email" name="email" id="email" placeholder="you@example.com" required />
-            </label>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
 
-            <label>
-              Message
-              <textarea name="message" id="message" rows="5" placeholder="Write your message..." required></textarea>
-            </label>
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Write your message..."
+              required
+            ></textarea>
 
-            <button class="btn primary" id="submitBtn" type="submit">Send</button>
-            <p class="form-status small" id="formStatus" role="status" aria-live="polite"></p>
+            <button class="btn primary" id="submitBtn" type="submit">
+              Send
+            </button>
+            <p
+              class="form-status small"
+              id="formStatus"
+              role="status"
+              aria-live="polite"
+            ></p>
           </form>
 
-          <div class="card">
-            <h3>Quick Links</h3>
+          <aside class="card" aria-labelledby="quick-links-heading">
+            <h3 id="quick-links-heading">Quick Links</h3>
             <ul class="list">
               <li>
-                <a href="https://github.com/kawthar1235" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/kawthar1235"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/kawthar-al-khawaja-639a97367" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/kawthar-al-khawaja-639a97367"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   LinkedIn
                 </a>
               </li>
@@ -327,18 +439,18 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="muted small">© <span id="year"></span> Kawthar Alkhawajah</p>
       <a class="small" href="#home">Back to top ↑</a>
     </div>
   </footer>
-
 </body>
 </html>
