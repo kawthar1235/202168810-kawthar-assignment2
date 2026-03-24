@@ -104,15 +104,6 @@ Used Flexbox and Media Queries
 
 ---
 
-## 🖼️ Screenshots
-
-_Add screenshots of your website here_
-
-Example:
-
-
----
-
 ## ⚠️ Known Issues
 
 - Minor spacing issues on some screen sizes  
@@ -166,7 +157,7 @@ King Fahd University of Petroleum and Minerals
 ## 🔗 Links
 
 - GitHub: https://github.com/kawthar1235  
-- Live Website: (add your link here)
+- Live Website: https://kawthar1235.github.io/202168810-kawthar-assignment2/
 
 ---
 
