@@ -1,7 +1,5 @@
 # 202168810-kawthar-assignment2
 
-# 🌸 Kawthar Portfolio Website
-
 A modern and responsive personal portfolio website that showcases my work, skills, and background as a Software Engineering student with a strong interest in UI/UX design and front-end development.
 
 ---
@@ -39,42 +37,6 @@ It also focuses on delivering a clean, aesthetic, and user-friendly experience.
 - **JavaScript (ES6)** – interactivity and dynamic behavior  
 - **LocalStorage** – saving user preferences (theme)
 
----
-
-## 📁 Folder Structure
-
-```bash
-project-folder/
-│
-├── index.html
-├── README.md
-│
-├── .vscode/                
-│
-├── assets/
-│   └── images/              
-│       ├── design-1.png
-│       ├── design-2.png
-│       ├── design-3.png
-│       ├── design-4.png
-│       ├── me.png
-│       ├── profile.png
-│       ├── project-1.png
-│       ├── project-2.png
-│       └── project-3.png
-│
-├── css/
-│   └── styles.css           
-│
-├── js/
-│   └── script.js           
-│
-├── docs/
-│   ├── ai-usage-report.md        
-│   └── technical-documentation.md 
-
-exit
----
 
 ## ▶️ How to Run the Project
 
@@ -212,3 +174,35 @@ King Fahd University of Petroleum and Minerals
 
 This project represents my current level in front-end development.  
 Future versions will continue to improve both functionality and design.
+
+## 📁 Folder Structure
+
+```bash
+project-folder/
+│
+├── index.html
+├── README.md
+│
+├── .vscode/                
+│
+├── assets/
+│   └── images/              
+│       ├── design-1.png
+│       ├── design-2.png
+│       ├── design-3.png
+│       ├── design-4.png
+│       ├── me.png
+│       ├── profile.png
+│       ├── project-1.png
+│       ├── project-2.png
+│       └── project-3.png
+│
+├── css/
+│   └── styles.css           
+│
+├── js/
+│   └── script.js           
+│
+├── docs/
+│   ├── ai-usage-report.md        
+│   └── technical-documentation.md 
