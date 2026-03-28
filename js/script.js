@@ -398,18 +398,16 @@ const $$ = (selector) => document.querySelectorAll(selector);
    Back To Top 
 ========================= */
 (function backToTop() {
-  const link = document.querySelector('a[href="#home"]');
+  const link = document.querySelector('.site-footer a');
+
   if (!link) return;
 
   link.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const target = document.getElementById("home");
-    if (!target) return;
-
-    target.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
   });
 })();
