@@ -103,6 +103,89 @@ Used Flexbox and Media Queries
 → Ensures compatibility across all devices  
 
 ---
+## ✅ Requirements Checklist
+
+This section shows how the project meets the assignment requirements.
+
+---
+
+### 🔹 Functionality
+
+| Requirement | Implementation |
+|------------|--------------|
+| Website is fully functional | All pages load correctly and features work as expected |
+| Interactive elements included | Theme toggle, modal, flip cards, dynamic greeting |
+| JavaScript integration | Used for dynamic content and interactivity |
+| No major bugs | Tested and working smoothly |
+
+---
+
+### 🔹 User Interface & Design
+
+| Requirement | Implementation |
+|------------|--------------|
+| Clean and modern UI | Minimal layout with soft color palette |
+| Consistent design | Unified typography, spacing, and colors |
+| Visual hierarchy | Clear sections (Hero, Projects, Contact) |
+| Responsive design | Works on mobile, tablet, and desktop |
+
+---
+
+### 🔹 Interactivity (Assignment 2 Requirement)
+
+| Requirement | Implementation |
+|------------|--------------|
+| Dynamic content | Greeting changes based on time |
+| User interaction | Project cards flip on hover |
+| Event handling | Buttons trigger modals |
+| State management | Theme saved using LocalStorage |
+
+---
+
+### 🔹 Code Quality
+
+| Requirement | Implementation |
+|------------|--------------|
+| Clean structure | Organized folders (assets, css, js, docs) |
+| Readable code | Proper naming and formatting |
+| Separation of concerns | HTML, CSS, JS separated |
+| Reusable components | Cards and modal reused across projects |
+
+---
+
+### 🔹 Documentation
+
+| Requirement | Implementation |
+|------------|--------------|
+| README file | Complete with setup, features, and explanation |
+| AI usage report | Included in `/docs/ai-usage-report.md` |
+| Technical documentation | Included in `/docs/technical-documentation.md` |
+| Clear instructions | How to run and deploy the project |
+
+---
+
+### 🔹 Creativity & Extra Features
+
+| Feature | Description |
+|--------|------------|
+| Theme toggle | Light/Dark mode with saved preference |
+| Flip card effect | Interactive 3D project cards |
+| Modal system | Dynamic project details popup |
+| Animations | Smooth transitions and UI effects |
+| Personalized UI | Greeting system and custom styling |
+
+---
+
+## 🎯 Final Result
+
+This project successfully meets all assignment requirements and demonstrates:
+
+- Strong front-end development skills  
+- Good UI/UX design understanding  
+- Effective use of JavaScript for interactivity  
+- Clean and organized project structure  
+
+---
 
 ## ⚠️ Known Issues
 
